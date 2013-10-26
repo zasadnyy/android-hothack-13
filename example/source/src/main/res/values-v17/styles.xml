@@ -1,0 +1,183 @@
+<!--
+  Copyright 2012 Google Inc.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+  -->
+
+<resources>
+
+    <!-- Enable RTL support on newer devices -->
+    <!-- Prevents crash on certain devices to namespace conflict -->
+    <style name="FrameworkRoot.Base" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="android:paddingStart">?android:attr/paddingLeft</item>
+        <item name="android:paddingEnd">?android:attr/paddingRight</item>
+        <item name="android:layout_marginStart">?android:attr/layout_marginLeft</item>
+        <item name="android:layout_marginEnd">?android:attr/layout_marginRight</item>
+        <item name="android:layout_toStartOf">?android:attr/layout_toLeftOf</item>
+        <item name="android:layout_toEndOf">?android:attr/layout_toRightOf</item>
+        <item name="android:layout_alignParentStart">?android:attr/layout_alignParentLeft</item>
+        <item name="android:layout_alignParentEnd">?android:attr/layout_alignParentRight</item>
+        <item name="android:drawableStart">?android:attr/drawableLeft</item>
+        <item name="android:drawableEnd">?android:attr/drawableRight</item>
+    </style>
+
+    <style name="FeedbackQuestionGuideText">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:textAlignment">viewStart</item>
+        <item name="android:textSize">@dimen/text_size_small</item>
+        <item name="android:textColor">@color/accent_1</item>
+    </style>
+    <!--<item name="android:gravity">start</item>-->
+
+    <style name="FeedbackQuestionGuideText.Right">
+        <item name="android:textAlignment">viewEnd</item>
+    </style>
+    <!--<item name="android:gravity">end</item>-->
+
+    <!-- Stream -->
+
+    <style name="StreamActivity">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="StreamUserName">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/stream_item_content_padding_double</item>
+        <item name="android:layout_marginLeft">@dimen/stream_item_content_padding</item>
+        <item name="android:layout_marginRight">@dimen/stream_item_content_padding</item>
+        <item name="android:drawablePadding">@dimen/stream_glyph_padding</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:textColor">@color/body_text_1</item>
+        <item name="android:textSize">@dimen/stream_name_text_size</item>
+        <item name="android:fontFamily">sans-serif-condensed</item>
+    </style>
+
+    <style name="StreamTextSmall">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:drawablePadding">@dimen/stream_glyph_padding</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:textColor">@color/stream_secondary_text_color</item>
+        <item name="android:textSize">@dimen/stream_details_text_size</item>
+        <item name="android:textAlignment">viewStart</item>
+    </style>
+
+    <style name="StreamRetweet" parent="StreamTextSmall">
+        <item name="android:layout_marginTop">@dimen/stream_item_content_padding_double</item>
+        <item name="android:layout_marginLeft">@dimen/stream_item_content_padding</item>
+        <item name="android:layout_marginRight">@dimen/stream_item_content_padding</item>
+        <item name="android:drawableRight">@drawable/ic_retweet_glyph</item>
+        <item name="android:drawablePadding">@dimen/stream_glyph_padding_half</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:paddingTop">@dimen/stream_item_content_padding_half</item>
+        <item name="android:textSize">@dimen/stream_rt_text_size</item>
+    </style>
+
+    <style name="StreamTimestamp" parent="StreamTextSmall">
+        <item name="android:layout_marginRight">@dimen/stream_item_content_padding</item>
+        <item name="android:layout_marginLeft">@dimen/stream_item_content_padding</item>
+        <item name="android:layout_alignParentRight">true</item>
+    </style>
+
+    <style name="StreamContent">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">@dimen/stream_item_content_padding_half</item>
+        <item name="android:paddingBottom">@dimen/stream_item_content_padding</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:textColor">@color/stream_content_text_color</item>
+        <item name="android:textColorLink">@color/accent_1</item>
+        <item name="android:textSize">@dimen/stream_content_text_size</item>
+        <item name="android:visibility">visible</item>
+        <item name="android:textAlignment">viewStart</item>
+    </style>
+
+    <style name="SessionDetailHeader">
+        <item name="android:background">@drawable/transparent_background_pattern</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:paddingStart">@dimen/content_padding_normal</item>
+        <item name="android:paddingEnd">@dimen/content_padding_normal</item>
+        <item name="android:paddingTop">@dimen/content_padding_normal</item>
+        <item name="android:paddingBottom">@dimen/content_padding_normal</item>
+    </style>
+
+    <style name="SessionDetailPlusOne">
+        <item name="android:layout_alignParentEnd">true</item>
+        <item name="android:layout_alignParentTop">true</item>
+        <item name="android:layout_marginStart">@dimen/content_padding_normal</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:contentDescription">@string/plus_one_description_standard</item>
+    </style>
+
+    <style name="SessionDetailTitle" parent="@style/TextHeader">
+        <item name="android:layout_alignParentStart">true</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="SessionDetailSubtitle" parent="@style/TextHeaderSub">
+        <item name="android:layout_below">@id/session_title</item>
+        <item name="android:layout_alignParentStart">true</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="SpeakerDetailImage">
+        <item name="android:scaleType">centerCrop</item>
+        <item name="android:layout_alignParentStart">true</item>
+        <item name="android:layout_alignParentTop">true</item>
+        <item name="android:layout_width">@dimen/speaker_image_size</item>
+        <item name="android:layout_height">@dimen/speaker_image_size</item>
+        <item name="android:layout_marginEnd">@dimen/speaker_image_padding</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+    </style>
+
+    <style name="SpeakerDetailHeader" parent="@style/TextHeader3">
+        <item name="android:layout_toEndOf">@id/speaker_image</item>
+        <item name="android:layout_alignParentTop">true</item>
+        <item name="android:layout_alignParentEnd">true</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="SpeakerDetailAbstract" parent="@style/TextBody">
+        <item name="android:layout_below">@id/speaker_header</item>
+        <item name="android:layout_alignStart">@id/speaker_header</item>
+        <item name="android:layout_alignEnd">@id/speaker_header</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="FeedbackRatingBarLabelOne" parent="FeedbackRatingBarLabel">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">48dp</item>
+        <item name="android:gravity">start|center_vertical</item>
+    </style>
+
+    <style name="FeedbackRatingBarLabelFive" parent="FeedbackRatingBarLabel">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">48dp</item>
+        <item name="android:gravity">end|center_vertical</item>
+    </style>
+
+</resources>

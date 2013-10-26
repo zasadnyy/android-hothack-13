@@ -1,0 +1,78 @@
+{
+   "tracks":[
+      {
+         "colour":"#99cc00",
+         "id":"140",
+         "sessions":[
+            "309",
+            "311",
+            "304",
+            "201",
+            "301",
+            "316"
+         ],
+         "title":"Android",
+         "level":"1",
+         "description":"Development and Monetization",
+         "meta":1
+      },
+      {
+         "colour":"#ff8800",
+         "id":"142",
+         "sessions":[
+            "297",
+            "292",
+            "291",
+            "296",
+            "199",
+            "308",
+            "307"
+         ],
+         "title":"GDG[x]",
+         "level":"1",
+         "description":"Google Glass, Education, other interesting projects",
+         "meta":1
+      },
+      {
+         "colour":"#47b7e6",
+         "id":"204",
+         "sessions":[
+            "303",
+            "299",
+            "300"
+         ],
+         "title":"Glass",
+         "level":"1",
+         "description":"Google Glass Development and Experience",
+         "meta":1
+      },
+      {
+         "colour":"#cc0000",
+         "id":"293",
+         "sessions":[
+            "298",
+            "294"
+         ],
+         "title":"Google Ads",
+         "level":"1",
+         "description":"AdWords, Analytics",
+         "meta":1
+      },
+      {
+         "colour":"#3366cc",
+         "id":"141",
+         "sessions":[
+            "314",
+            "194",
+            "295",
+            "290",
+            "305",
+            "302"
+         ],
+         "title":"Web",
+         "level":"1",
+         "description":"Google Analytics, AngularJS, WebComponents",
+         "meta":1
+      }
+   ]
+}
